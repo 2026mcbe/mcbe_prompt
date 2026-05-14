@@ -16,12 +16,9 @@
       --black: #101418;
       --gray-800: #343A40;
       --gray-600: #666D75;
-      --gray-400: #ADB5BD;
       --gray-80: #F1F3F5;
       --white: #FFFFFF;
     }
-
-    html { font-size: 16px; }
 
     body {
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
@@ -29,7 +26,6 @@
       color: var(--black);
       max-width: 390px;
       margin: 0 auto;
-      padding-top: 70px; /* fixed banner height */
     }
 
     /* ── FIXED TOP BANNER ── */
@@ -40,53 +36,13 @@
       transform: translateX(-50%);
       width: 100%;
       max-width: 390px;
-      height: 70px;
-      background: #000;
-      background-image: linear-gradient(19deg, rgba(127,255,170,0.4) 10%, rgba(0,0,0,0.4) 52%, rgba(127,255,170,0.4) 114%);
-      overflow: hidden;
       z-index: 100;
-      display: flex;
-      align-items: center;
     }
 
-    .banner-text {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      filter: drop-shadow(0px 0.5px 0px rgba(0,0,0,0.45));
-      z-index: 2;
-    }
-
-    .banner-sub {
-      font-size: 15px;
-      font-weight: 500;
-      color: #fff;
-      line-height: 1.38;
-      letter-spacing: -0.15px;
-      white-space: nowrap;
-    }
-
-    .banner-main {
-      font-size: 17px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.24;
-      letter-spacing: -0.34px;
-      white-space: nowrap;
-    }
-
-    .banner-main .accent { color: var(--green); }
-
-    /* placeholder for player images in banner */
-    .banner-players {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 180px;
-      height: 70px;
-      /* players image — replace with actual image */
-      background: rgba(255,255,255,0.05);
+    .top-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     /* ── HERO SECTION ── */
@@ -95,17 +51,14 @@
       flex-direction: column;
       align-items: center;
       gap: 22px;
-      padding-top: 110px;
-      padding-bottom: 0;
+      padding-top: 40px;
+      background: var(--white);
     }
 
-    /* logo placeholder */
-    .logo-wrap {
+    .logo-1 {
+      display: block;
       height: 20px;
-      width: 92px;
-      /* replace with <img src="myrealtrip-wordmark.svg" /> */
-      background: #e0e0e0;
-      border-radius: 3px;
+      width: auto;
     }
 
     .hero-title {
@@ -113,38 +66,27 @@
       font-weight: 700;
       line-height: 1.24;
       letter-spacing: -0.56px;
-      color: var(--black);
+      color: #000;
       text-align: center;
       font-feature-settings: 'ss03' 1, 'ss05' 1;
     }
 
-    /* hero image (16:9) */
     .hero-image {
+      display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
-      /* replace with <img src="hero.jpg" /> */
-      background: #e8e8e8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray-400);
-      font-size: 13px;
-      font-weight: 500;
+      height: auto;
     }
 
     /* ── HOW TO SECTION ── */
     .howto {
-      padding: 48px 30px 0;
+      background: var(--white);
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 28px;
     }
 
-    .step {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    .step { display: flex; flex-direction: column; gap: 8px; }
 
     .step-title {
       font-size: 16px;
@@ -163,12 +105,16 @@
       color: var(--gray-800);
     }
 
-    /* ── PROMPT BOX ── */
+    /* ── PROMPT SECTION ── */
     .prompt-section {
-      padding: 32px 25px 0;
+      background: var(--white);
+      padding: 0 20px 40px;
+      display: flex;
+      justify-content: center;
     }
 
     .prompt-box {
+      width: 100%;
       background: var(--gray-80);
       border-radius: 12px;
       padding: 20px 24px 30px;
@@ -203,18 +149,14 @@
       font-size: 12px;
       font-weight: 600;
       font-family: 'Pretendard', sans-serif;
+      letter-spacing: -0.12px;
       cursor: pointer;
       transition: opacity 0.15s;
-      letter-spacing: -0.12px;
     }
 
     .copy-btn:active { opacity: 0.75; }
 
-    .copy-btn svg {
-      width: 12px;
-      height: 12px;
-      flex-shrink: 0;
-    }
+    .copy-btn svg { width: 12px; height: 12px; flex-shrink: 0; }
 
     .prompt-text {
       font-size: 12px;
@@ -232,44 +174,20 @@
       color: var(--black);
     }
 
-    /* ── BOTTOM LOGO + TEXT ── */
+    /* ── BOTTOM INFO ── */
     .bottom-info {
+      background: var(--white);
+      padding: 40px 20px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 22px;
-      padding: 48px 25px 0;
     }
 
-    .bottom-logo-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .logo-2 {
+      display: block;
       height: 21px;
-    }
-
-    /* LAFC emblem placeholder */
-    .logo-lafc {
-      width: 17px;
-      height: 17px;
-      background: #e0e0e0;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-
-    .logo-divider {
-      width: 1px;
-      height: 17px;
-      background: #e0e0e0;
-      flex-shrink: 0;
-    }
-
-    /* Myrealtrip logo placeholder */
-    .logo-mrt-bottom {
-      width: 79px;
-      height: 21px;
-      background: #e0e0e0;
-      border-radius: 3px;
+      width: auto;
     }
 
     .bottom-title {
@@ -277,14 +195,17 @@
       font-weight: 700;
       line-height: 1.24;
       letter-spacing: -0.56px;
-      color: var(--black);
+      color: #000;
       text-align: center;
       font-feature-settings: 'ss03' 1, 'ss05' 1;
     }
 
     /* ── CTA CARD ── */
     .cta-section {
-      padding: 32px 25px 64px;
+      background: var(--white);
+      padding: 0 20px 80px;
+      display: flex;
+      justify-content: center;
     }
 
     .cta-card {
@@ -293,60 +214,52 @@
       border-radius: 12px;
       overflow: hidden;
       position: relative;
-      background: #111;
-      background-image:
-        linear-gradient(56deg, rgba(127,255,170,0.4) 10%, rgba(0,0,0,0.4) 52%, rgba(127,255,170,0.4) 114%),
-        linear-gradient(90deg, #000 0%, #000 100%);
     }
 
-    /* CTA background image placeholder */
-    .cta-bg {
+    .cta-card-bg {
       position: absolute;
       inset: 0;
-      /* replace with <img src="cta-bg.jpg" /> */
-      background: #1a1a1a;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+      border-radius: 12px;
     }
 
-    /* gradient overlay */
     .cta-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(19,24,70,0.3) 21%, transparent 55%);
+      border-radius: 12px;
+      background:
+        linear-gradient(55deg, rgba(127,255,170,0.4) 10%, rgba(0,0,0,0.4) 52%, rgba(127,255,170,0.4) 114%),
+        linear-gradient(90deg, #000 0%, #000 100%),
+        linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%),
+        linear-gradient(180deg, rgba(19,24,70,0.3) 21%, rgba(19,24,70,0) 55%);
     }
 
-    /* player images placeholder */
-    .cta-players {
-      position: absolute;
-      inset: 70px 0 0 0;
-      /* replace with actual LAFC player headshots */
-      background: rgba(255,255,255,0.03);
-    }
-
-    /* bottom gradient fade */
     .cta-fade {
       position: absolute;
-      bottom: 0;
+      bottom: -48px;
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      height: 225px;
+      height: 226px;
       background: linear-gradient(180deg, transparent 33%, rgba(1,1,1,0.7) 47%, #010101 59%);
     }
 
     .cta-content {
       position: absolute;
-      top: 0;
+      top: 19px;
       left: 0;
       right: 0;
       text-align: center;
-      padding-top: 20px;
       z-index: 2;
+      color: #fff;
     }
 
     .cta-sub {
-      font-size: 14.5px;
+      font-size: 14.6px;
       font-weight: 600;
-      color: #fff;
       line-height: 1.24;
       letter-spacing: -0.29px;
       font-feature-settings: 'ss03' 1, 'ss05' 1;
@@ -357,19 +270,16 @@
       font-weight: 700;
       line-height: 1.22;
       letter-spacing: -0.54px;
-      text-align: center;
       margin-top: 2px;
     }
 
     .cta-title .green { color: var(--green); }
-    .cta-title .white { color: #fff; }
 
     .cta-btn {
       position: absolute;
-      bottom: 0;
+      bottom: 19px;
       left: 50%;
       transform: translateX(-50%);
-      margin-bottom: 19px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -421,28 +331,19 @@
 <body>
 
   <!-- FIXED TOP BANNER -->
-  <div class="top-banner">
-    <div class="banner-text">
-      <p class="banner-sub">마이리얼트립 × LAFC 역대급 이벤트</p>
-      <p class="banner-main"><span class="accent">LA여행 + 손흥민 직관 0원</span> 응모하기</p>
-    </div>
-    <!-- LAFC player headshots: replace .banner-players with actual images -->
-    <div class="banner-players"></div>
+  <div class="top-banner" id="topBanner">
+    <img src="image/top_banner.png" alt="마이리얼트립 × LAFC 역대급 이벤트 — LA여행 + 손흥민 직관 0원 응모하기" />
   </div>
 
   <!-- HERO -->
   <section class="hero">
-    <!-- Myrealtrip wordmark: replace .logo-wrap with <img src="myrealtrip-wordmark.svg" alt="마이리얼트립" /> -->
-    <div class="logo-wrap"></div>
-
+    <img class="logo-1" src="image/logo-1.png" alt="마이리얼트립" />
     <h1 class="hero-title">
       우리집 댕냥이<br />
       축구선수 만들기<br />
       30초면 가능해요!
     </h1>
-
-    <!-- Hero image (16:9): replace with <img src="hero.jpg" alt="" /> -->
-    <div class="hero-image">이미지 영역</div>
+    <img class="hero-image" src="image/prompt_example image.png" alt="반려동물 AI 변환 예시" />
   </section>
 
   <!-- HOW TO -->
@@ -450,19 +351,16 @@
     <div class="step">
       <p class="step-title">1. Chat GPT 혹은 Gemini 접속</p>
     </div>
-
     <div class="step">
       <p class="step-title">2. 반려동물 사진 첨부</p>
       <p class="step-desc">정면으로 나온 사진일수록 결과물이 잘 나와요</p>
     </div>
-
     <div class="step">
       <p class="step-title">3. 아래 프롬프트 복사 후 붙여넣기</p>
     </div>
-
     <div class="step">
       <p class="step-title">4. [번호]와 [이름] 직접 수정</p>
-      <p class="step-desc">프롬프트에서 [번호]와 [이름]을 내 반려동물에 맞춰 수정해주세요. LAFC에 원하는 구단 명을 넣으면 다른 구단 유니폼도 입힐 수 있어요.</p>
+      <p class="step-desc">프롬프트에서 [번호]와 [이름]을 내 반려동물에 맞춰 수정해주세요. LAFC에 원하는 구단 명을 넣으면 다른 유니폼도 입힐 수 있어요.</p>
     </div>
   </section>
 
@@ -479,7 +377,6 @@
           <span id="copyBtnText">복사하기</span>
         </button>
       </div>
-
       <div class="prompt-text" id="promptText">첨부한 반려동물 사진을 축구 중계 화면 속 선수로 변환해줘.
 
 [유지할 특징]
@@ -506,14 +403,7 @@ TV 중계 화면처럼 반려동물에게 줌인된 구도
 
   <!-- BOTTOM INFO -->
   <section class="bottom-info">
-    <div class="bottom-logo-row">
-      <!-- LAFC emblem: replace .logo-lafc with <img src="lafc-emblem.svg" alt="LAFC" /> -->
-      <div class="logo-lafc"></div>
-      <div class="logo-divider"></div>
-      <!-- Myrealtrip logo: replace .logo-mrt-bottom with <img src="myrealtrip-logo.svg" alt="마이리얼트립" /> -->
-      <div class="logo-mrt-bottom"></div>
-    </div>
-
+    <img class="logo-2" src="image/logo-2.png" alt="LAFC × 마이리얼트립" />
     <h2 class="bottom-title">
       LA여행과 손흥민 직관<br />
       0원 이벤트도 확인해보세요!
@@ -523,23 +413,16 @@ TV 중계 화면처럼 반려동물에게 줌인된 구도
   <!-- CTA CARD -->
   <section class="cta-section">
     <div class="cta-card">
-      <!-- background image: replace .cta-bg with <img class="cta-bg" src="cta-bg.jpg" alt="" /> -->
-      <div class="cta-bg"></div>
+      <img class="cta-card-bg" src="image/bottom_banner.png" alt="" />
       <div class="cta-overlay"></div>
-
+      <div class="cta-fade"></div>
       <div class="cta-content">
         <p class="cta-sub">왕복 항공권과 호텔, LAFC 직관 패키지까지!</p>
         <div class="cta-title">
           <p class="green">LA 여행 + 손흥민 직관</p>
-          <p class="white">무료로 보내드립니다</p>
+          <p>무료로 보내드립니다</p>
         </div>
       </div>
-
-      <!-- player headshots: replace .cta-players with actual images -->
-      <div class="cta-players"></div>
-
-      <div class="cta-fade"></div>
-
       <a href="https://mo.myrealtrip.com/atm5ry" class="cta-btn" target="_blank" rel="noopener">
         <span>자세히 보기</span>
       </a>
@@ -550,6 +433,21 @@ TV 중계 화면처럼 반려동물에게 줌인된 구도
   <div class="toast" id="toast">프롬프트가 복사되었어요!</div>
 
   <script>
+    // 상단 배너 높이에 맞게 body padding-top 동적 조절
+    function updatePadding() {
+      const banner = document.getElementById('topBanner');
+      document.body.style.paddingTop = banner.offsetHeight + 'px';
+    }
+
+    const bannerImg = document.querySelector('.top-banner img');
+    if (bannerImg.complete) {
+      updatePadding();
+    } else {
+      bannerImg.addEventListener('load', updatePadding);
+    }
+    window.addEventListener('resize', updatePadding);
+
+    // 프롬프트 복사
     const PROMPT_PLAIN = `첨부한 반려동물 사진을 축구 중계 화면 속 선수로 변환해줘.
 
 [유지할 특징]
