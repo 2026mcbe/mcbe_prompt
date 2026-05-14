@@ -31,18 +31,6 @@
       color: var(--black);
     }
 
-    @media (min-width: 391px) {
-      body {
-        max-width: 390px;
-        margin: 0 auto;
-      }
-      .top-banner {
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 390px;
-      }
-    }
-
     /* ── FIXED TOP BANNER ── */
     .top-banner {
       position: fixed;
@@ -251,6 +239,17 @@
     .toast.show {
       opacity: 1;
       transform: translateX(-50%) translateY(0);
+    }
+    @media (min-width: 391px) {
+      body {
+        max-width: 390px;
+        margin: 0 auto;
+      }
+      .top-banner {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 390px;
+      }
     }
   </style>
 </head>
