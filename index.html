@@ -37,13 +37,9 @@
       color: var(--black);
     }
 
-    /* ── FIXED TOP BANNER ── */
+    /* ── TOP BANNER ── */
     .top-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
-      z-index: 100;
     }
 
     .top-banner img {
@@ -251,11 +247,6 @@
         max-width: 390px;
         margin: 0 auto;
       }
-      .top-banner {
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 390px;
-      }
     }
   </style>
 </head>
@@ -354,20 +345,6 @@ TV 중계 화면처럼 반려동물에게 줌인된 구도
   <div class="toast" id="toast">프롬프트가 복사되었어요!</div>
 
   <script>
-    // 상단 배너 높이에 맞게 body padding-top 동적 조절
-    function updatePadding() {
-      const banner = document.getElementById('topBanner');
-      document.body.style.paddingTop = banner.offsetHeight + 'px';
-    }
-
-    const bannerImg = document.querySelector('.top-banner img');
-    if (bannerImg.complete) {
-      updatePadding();
-    } else {
-      bannerImg.addEventListener('load', updatePadding);
-    }
-    window.addEventListener('resize', updatePadding);
-
     // 프롬프트 복사
     const PROMPT_PLAIN = `첨부한 반려동물 사진을 축구 중계 화면 속 선수로 변환해줘.
 
