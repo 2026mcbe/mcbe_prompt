@@ -208,96 +208,11 @@
       justify-content: center;
     }
 
-    .cta-card {
+    .cta-banner-img {
+      display: block;
       width: 100%;
-      height: 264px;
+      height: auto;
       border-radius: 12px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .cta-card-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: bottom;
-      border-radius: 12px;
-    }
-
-    .cta-overlay {
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
-      background:
-        linear-gradient(55deg, rgba(127,255,170,0.25) 10%, rgba(0,0,0,0.35) 52%, rgba(127,255,170,0.25) 114%),
-        linear-gradient(180deg, rgba(19,24,70,0.3) 21%, rgba(19,24,70,0) 55%);
-    }
-
-    .cta-fade {
-      position: absolute;
-      bottom: -48px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 226px;
-      background: linear-gradient(180deg, transparent 33%, rgba(1,1,1,0.7) 47%, #010101 59%);
-    }
-
-    .cta-content {
-      position: absolute;
-      top: 19px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 2;
-      color: #fff;
-    }
-
-    .cta-sub {
-      font-size: 14.6px;
-      font-weight: 600;
-      line-height: 1.24;
-      letter-spacing: -0.29px;
-      font-feature-settings: 'ss03' 1, 'ss05' 1;
-    }
-
-    .cta-title {
-      font-size: 26.9px;
-      font-weight: 700;
-      line-height: 1.22;
-      letter-spacing: -0.54px;
-      margin-top: 2px;
-    }
-
-    .cta-title .green { color: var(--green); }
-
-    .cta-btn {
-      position: absolute;
-      bottom: 19px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 250px;
-      height: 46.5px;
-      background: var(--green);
-      border-radius: 8px;
-      text-decoration: none;
-      z-index: 3;
-      transition: opacity 0.15s;
-    }
-
-    .cta-btn:active { opacity: 0.85; }
-
-    .cta-btn span {
-      font-size: 14.6px;
-      font-weight: 600;
-      color: var(--black);
-      letter-spacing: -0.29px;
-      font-feature-settings: 'ss03' 1, 'ss05' 1;
     }
 
     /* ── TOAST ── */
@@ -410,21 +325,9 @@ TV 중계 화면처럼 반려동물에게 줌인된 구도
 
   <!-- CTA CARD -->
   <section class="cta-section">
-    <div class="cta-card">
-      <img class="cta-card-bg" src="image/bottom_banner.jpg" alt="" />
-      <div class="cta-overlay"></div>
-      <div class="cta-fade"></div>
-      <div class="cta-content">
-        <p class="cta-sub">왕복 항공권과 호텔, LAFC 직관 패키지까지!</p>
-        <div class="cta-title">
-          <p class="green">LA 여행 + 손흥민 직관</p>
-          <p>무료로 보내드립니다</p>
-        </div>
-      </div>
-      <a href="https://mo.myrealtrip.com/atm5ry" class="cta-btn" target="_blank" rel="noopener">
-        <span>자세히 보기</span>
-      </a>
-    </div>
+    <a href="https://mo.myrealtrip.com/atm5ry" target="_blank" rel="noopener">
+      <img class="cta-banner-img" src="image/bottom_banner.jpg" alt="LA여행 + 손흥민 직관 0원 이벤트 자세히 보기" />
+    </a>
   </section>
 
   <!-- TOAST -->
